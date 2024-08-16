@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+    <div id="zaxis">
+        <br>
+        <div id="google_translate_element"></div>
+    
+    <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+    }
+    </script>
+    
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+        <br>
+      </div>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Blog</title>
+    <link rel="shortcut icon" href="../Images/fav.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../Images/fav.jpg">
+    <link rel="stylesheet" href="../Stylesheet/bootstrap.min.css">
+    <link rel="stylesheet" href="../Stylesheet/all.min.css">
+    <link rel="stylesheet" href="../Stylesheet/animate.css">
+    <link rel="stylesheet" href="../plugins/slider/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../plugins/slider/css/owl.theme.default.css">
+    <link rel="stylesheet" type="text/css" href="../Stylesheet/style.css" />
+    <style>
+        .background {
+            background-color: #f1f8ff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="continer-fluid ">
+
+
+        <div id="menu-jk" class="header-bottom">
+            <div class="container">
+                <div class="row nav-row">
+                    <div class="col-lg-3 col-md-12 logo">
+                        <a href="/">
+                            <img src="assets/images/logo.jpg" alt="">
+                            <a data-toggle="collapse" data-target="#menu" href="#menu"><i
+                                    class="fas d-block d-lg-none  small-menu fa-bars"></i></a>
+                        </a>
+
+                    </div>
+                    <div id="menu" class="col-lg-9 col-md-12 d-none d-lg-block nav-col">
+
+                        <ul class="navbad">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="/">Home
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about_us.html">About Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="services.html">Services</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="gallery.html">Gallery</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="blog.html">Blog</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact_us.html">Contact US</a>
+                            </li>
+
+
+
+
+                        </ul>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!--  ************************* Page Title Starts Here ************************** -->
+
+    <div class="page-nav no-margin row background">
+        <div class="container">
+            <div class="row">
+                <h2>Our Blog</h2>
+                <ul>
+                    <li> <a href="#"><i class="fas fa-home"></i> Home</a></li>
+                    <li><i class="fas fa-angle-double-right"></i> Blog</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- ################# Our Blog Starts Here#######################--->
+
+    <section class="our-blog">
+        <div class="container">
+         		
+            <div class="blog-row row">
+                <% if(blogs.length == 0 ){ %>
+                    <center><p>No blogs</p></center>
+                <% } else { %>  
+                <% for(i =0; i<blogs.length; i+=3){ %>
+                <div class="col-md-4 col-sm-6">
+                    <div class="single-blog">
+                        <figure>
+                            <iframe src="<%=blogs[i].content%> " title="<%=blogs[i].title%>"></iframe>
+                        </figure>title
+                        <div class="blog-detail">
+                            <small><%=blogs[i].owner%>| <%=blogs[i].date%></small>
+                            <h4><%=blogs[i].title%></h4>
+                            
+                            <div class="link">
+                                <a href="">Read more </a><i class="fas fa-long-arrow-alt-right"></i>
+                            </div>
+                        </div>	
+                    </div>
+                </div>
+                <% if(i+1 < blogs.length){ %> 
+                <div class="col-md-4 col-sm-6">
+                    <div class="single-blog">
+                        <figure>
+                            <audio controls>
+                                <source src="horse.ogg" type="audio/ogg">
+                                <source src="horse.mp3" type="audio/mpeg">
+                              </audio>
+                        </figure>
+                        <div class="blog-detail">
+                            <small><%=blogs[i+1].owner%>| <%=blogs[i+1].date%></small>
+                            <h4><%=blogs[i+1].title%></h4>
+                            
+                            <div class="link">
+                                <a href="">Read more </a><i class="fas fa-long-arrow-alt-right"></i>
+                            </div>
+                        </div>	
+                    </div>
+                </div>
+                <% } %> 
+                <% if(i+2 < blogs.length){ %> 
+                <div class="col-md-4 col-sm-6">
+                    <div class="single-blog">
+                        <figure>
+                            <audio controls>
+                                <source src="horse.ogg" type="audio/ogg">
+                                <source src="horse.mp3" type="audio/mpeg">
+                              </audio>
+                        </figure>
+                        <div class="blog-detail">
+                            <small><%=blogs[i+2].owner%>| <%=blogs[i+2].date%></small>
+                            <h4><%=blogs[i+2].title%></h4>
+                            
+                            <div class="link">
+                                <a href="">Read more </a><i class="fas fa-long-arrow-alt-right"></i>
+                            </div>
+                        </div>	
+                    </div>
+                </div>
+                <% } %>
+            <% } %>
+            <% } %> 
+            </div>
+         </div>
+    </section>
+
+
+
+
+
+    <!--  ************************* Footer Starts Here ************************** -->
+
+    <footer class="footer">
+
+
+
+        <div class="copy">
+            <div class="container">
+                <a href="https://www.smarteyeapps.com/">2015 &copy; All Rights Reserved | Designed and Developed by
+                    Smarteyeapps</a>
+
+            </div>
+        </div>
+
+
+
+
+</body>
+
+<script src="../js/jquery-3.2.1.min.js"></script>
+<script src="../js/popper.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../plugins/scroll-fixed/jquery-scrolltofixed-min.js"></script>
+<script src="../plugins/slider/js/owl.carousel.min.js"></script>
+<script src="../js/script.js"></script>
+
+</html>

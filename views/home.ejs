@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- <style>
+    .bluebtn{
+        background-color: #95BAFF;
+        border: none;
+    }
+</style> -->
+<div id="zaxis">
+  <br>
+  <div id="google_translate_element"></div>
+
+<script type="text/javascript">
+function googleTranslateElementInit() {
+new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+}
+</script>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <br>
+</div>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Home</title>
+    <link rel="shortcut icon" href="../Images/fav.png" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="../Images/fav.jpg" />
+    <link rel="stylesheet" href="../Stylesheet/bootstrap.min.css" />
+    <link rel="stylesheet" href="../Stylesheet/all.min.css" />
+    <link rel="stylesheet" href="../Stylesheet/animate.css" />
+    <link rel="stylesheet" href="../plugins/slider/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="../plugins/slider/css/owl.theme.default.css" />
+    <link rel="stylesheet" type="text/css" href="../Stylesheet/style.css" />
+    <style>
+      .bluebtn {
+        background-color: #c5e1fc;
+        border: none;
+        color: #ffffff;
+        border: solid;
+        
+      }
+      .test:hover{
+        background-color: #6C757D;
+      }
+
+      .footer {
+        background-color: #c5e1ff;
+      }
+
+      .roundbtn {
+        border-radius: 0%;
+      }
+
+      .whiteBtn {
+        color: gray;
+      }
+
+      .flexbox {
+        display: flex;
+      }
+
+      .navbad{
+        display:flex;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="continer-fluid" style="background-color: #f1f8ff">
+      <div id="menu-jk" class="header-bottom" style="background-color: #f1f8ff">
+        <div class="container">
+          <div class="row nav-row">
+            <div class="col-lg-3 col-md-12 logo">
+              <a href="/">
+                <img src="../Images/logo.png" alt="" style="width: 80%" />
+
+                <a data-toggle="collapse" data-target="#menu" href="#menu"
+                  ><i class="fas d-block d-lg-none small-menu fa-bars"></i
+                ></a>
+              </a>
+            </div>
+            <div id="menu" class="col-lg-9 col-md-12 d-none d-lg-block nav-col">
+              <ul class="navbad">
+                <% if(data.name != undefined && data.accessLevel == 'admin'){%>
+                  <li class="nav-item active">
+                    <a class="nav-link bluebtn" href="/users/admin/updateStatus">Update Status</a>
+                  </li>
+                <% } %>
+                
+                <% if( data.name != undefined ){%>
+                  <li class="nav-item active">
+                    <a class="nav-link bluebtn" href="/users/profile">Profile</a>
+                  </li>
+                <% } %>
+                
+
+                
+                <li class="nav-item">
+                  <a class="nav-link bluebtn" href="/contactUs">Contact Us</a>
+                </li>
+                <% if(data.name != undefined && (data.accessLevel == 'admin')){%>
+                  <li class="nav-item active">
+                    <a class="nav-link bluebtn" href="/postsNotices">Make Notice</a>
+                  </li>
+                <% } %>
+                <% if(data.name != undefined && (data.accessLevel == 'volunteer' || data.accessLevel == 'admin')){%>
+                  <li class="nav-item active">
+                    <a class="nav-link bluebtn" href="/postss">Make Post</a>
+                  </li>
+                <% } %>
+                
+               
+                <li>
+                  <div class="dropdown roundbtn whiteBtn">
+                    <button
+                      class="
+                        btn btn-secondary
+                        dropdown-toggle
+                        nav-link
+                        bluebtn
+                        roundbtn
+                      "
+                      type="button"
+                      id="dropdownMenuButton"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+               
+
+                    <% if(data.name == undefined){%>
+                      Log In
+                    <% } else{%>
+                      <%= data.name %>
+                    <% } %>
+                    </button>
+                    <div
+                      class="dropdown-menu bluebtn roundbtn"
+                      aria-labelledby="dropdownMenuButton"
+                    >
+                      
+                      <% if(data.name == undefined){%>
+                      <a class="dropdown-item" href="/users/register">Register</a>
+                      <a class="dropdown-item" href="/users/login">Sign in</a>
+                      <% }else{ %>
+                      <a class="dropdown-item" href="/users/logout">Log Out</a>
+                      <% } %> 
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ******************** Slider Starts Here ******************* -->
+    <div class="slider">
+      <!-- Set up your HTML -->
+      <div class="owl-carousel">
+        <div class="slider-img">
+          <div class="item">
+            <div class="slider-img">
+              <img src="../Images/slider/slider-3.jpg" alt="" />
+            </div>
+            <div class="container">
+              <div class="row">
+                <div
+                  class="
+                    col-lg-offset-2
+                    col-lg-8
+                    col-md-offset-2
+                    col-md-8
+                    col-sm-12
+                    col-xs-12
+                  "
+                >
+                  <div class="animated bounceInDown slider-captions">
+                    <h1 class="slider-title">
+                      Uninhibited - destigmatising SRH
+                    </h1>
+                    <p class="slider-text hidden-xs">
+                      We believe in de-stigmatising menstrual, sexual and
+                      reproductive health starting with an individual, household
+                      and eventually community to enable marginalised
+                      menstruators to seek healthcare, advocate for their needs
+                      and participate equitably in school, workplaces and
+                      society, eventually leading to reduced gender inequity and
+                      better health and wellbeing.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="slider-img">
+            <img src="../Images/slider/slider-1.jpg" alt="" />
+          </div>
+          <div class="container">
+            <div class="row">
+              <div
+                class="
+                  col-lg-offset-2
+                  col-lg-8
+                  col-md-offset-2
+                  col-md-8
+                  col-sm-12
+                  col-xs-12
+                "
+              >
+                <div class="slider-captions">
+                  <h1 class="slider-title">Our Impact</h1>
+                  <p class="slider-text hidden-xs">
+                    Our journey taught us access to menstrual products is only
+                    one part of the issue. To improve the participation, health
+                    and agency of menstruators, we had to break the silence
+                    around menstruation and include men and boys in the
+                    conversation.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--  ************************* About Us Starts Here ************************** -->
+    <section class="events" style="background-color: #ffffff">
+      <div class="container" style="background-color: #ffffff">
+        <div
+          id="carouselExampleIndicators"
+          class="carousel slide"
+          data-ride="carousel"
+        >
+          <ol class="carousel-indicators">
+            <li
+              data-target="#carouselExampleIndicators"
+              data-slide-to="0"
+              class="active"
+            ></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          </ol>
+          <p></p>
+        </br>
+
+          <% if(notices.length == 0 ){ %>
+            <center><h3 >No Notices</h3></center>
+            <% } %>
+          <% for(i=0; i<notices.length; i+=3){%>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="flexbox">
+                <% if( i < notices.length){ %>
+
+                <div class="card mx-auto" style="width: 18rem">
+                  <div class="card-body">
+                    <h5 class="card-title"><%= notices[i].title%></h5>
+                    <p class="card-text">
+                        <%= notices[i].content%>
+                    </p>
+                    <a href="#" class="card-link">Card link</a>
+                  </div>
+                </div>
+                <% } %>
+                <% if( i+1 < notices.length){ %>
+
+                <div class="card mx-auto" style="width: 18rem">
+                  <div class="card-body">
+                    <h5 class="card-title"><%= notices[i+1].title%></h5>
+                    <p class="card-text">
+                        <%= notices[i+1].content%>
+                    </p>
+                    <a href="#" class="card-link">Card link</a>
+                  </div>
+                </div>
+                <% } %>
+                <% if( i+2 < notices.length){ %>
+
+                <div class="card mx-auto" style="width: 18rem">
+                  <div class="card-body">
+                    <h5 class="card-title"><%= notices[i+2].title%></h5>
+                    <p class="card-text">
+                        <%= notices[i+2].content%>
+                    </p>
+                    <a href="#" class="card-link">Card link</a>
+                  </div>
+                </div>
+                <% } %>
+              </div>
+            </div>
+            <% } %>
+          </div>
+          <a
+            class="carousel-control-prev"
+            href="#carouselExampleIndicators"
+            role="button"
+            data-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a
+            class="carousel-control-next"
+            href="#carouselExampleIndicators"
+            role="button"
+            data-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Separate  -->
+
+    <div class="about-us container-fluid" style="background-color: #f1f8ff">
+      <div class="container">
+        <div class="row natur-row no-margin w-100">
+          <div class="text-part col-md-6 mx-auto">
+            <h2>About Our Charity</h2>
+
+            <p>
+              Uninhibited was started in 2014 with the intention of working on
+              the topic of menstruation with the idea of de-stigmatizing it.
+              After years of learning and churning, currently, we run multiple
+              programs around menstruation with marginalized communities with
+              both men and menstruators with the intention of making
+              menstruation a non-issue. They have started India’s first SRH
+              helpline through which they are helping out both men and women.
+              People can use this helpline to subscribe themselves to audio
+              content, talk to an agent or get doctor consultation. All these
+              facilities are provided at free of cost. They have had around
+              12,000 male and 51,000 female subscribers within a year. They have
+              attended more than 10,000 phone calls till date. Uninhibited had
+              started a 15 month paid fellowship program in 2018 and a third
+              batch is in progress.
+            </p>
+          </div>
+          <div class="image-part col-md-6 mx-auto">
+            <div class="about-quick-box row mx-auto">
+                <% if(data.name == undefined){%>
+                        
+              <div class="col-md-8 mx-auto">
+                <div class="about-qcard mx-auto">
+                    <a href="/users/login">
+                  <i class="fas fa-user"></i>
+                  <p>Become a Volunteer</p>
+                </a>
+                </div>
+              </div>
+                <%} else{ %>   
+                    
+              <div class="col-md-8 mx-auto">
+                <div class="about-qcard mx-auto">
+                  <form action="/users/becomeVolunteer?_method=PUT" method="POST">
+                   <button type="submit" style="background-color: rgb(0, 0, 0,0); border: 0;">
+                  <i class="fas fa-user"></i>
+                  <p>Become a Volunteer</p>
+                </button>
+              </form>
+                </div>
+              </div>
+                <% } %>
+              <% if(data.name == undefined){%>
+                
+              <div class="col-md-8 mx-auto">
+                <div class="about-qcard">
+                
+                    <a href="/users/login">
+                  <i class="fas fa-envelope yell"></i>
+                        <p>Subscribe to the newsletter</p>
+                    
+                    </a>
+                </div>
+              </div>
+                <% } %>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ################# Mission Vision Start Here #######################--->
+
+    <section
+      class="container-fluid mission-vision"
+      style="background-color: #ffffff"
+    >
+      <div class="container">
+        <div class="row mission">
+          <div class="col-md-6 mv-det">
+            <h1>Our Mission</h1>
+            <p>
+              We are mainly focused on how to reach out to more men, educate ad
+              encourage them to know about menstruation and their own SRH
+              issues. We are looking platform to access credible and
+              age-appropriate information on male SRH which should be easy and
+              engaging for men in rural and under-resourced communities. We
+              envision a solution to engage with men in communities who have
+              limited access or interest in tech beyond the direct intervention.
+              We are also looking at innovative ways on how to increase our
+              subscribers to regularly listen to the audio content.
+            </p>
+          </div>
+          <div class="col-md-6 mv-img">
+            <img src="../Images/misin.jpg" alt="" />
+          </div>
+        </div>
+        <div class="row vision">
+          <div class="col-md-6 mv-img">
+            <img src="../Images/vision.jpg" alt="" />
+          </div>
+          <div class="col-md-6 mv-det">
+            <h1>Our Vision</h1>
+            <p>
+              We envision a solution to engage with men in communities who have
+              limited access or interest in tech beyond the direct intervention.
+              We are also looking at innovative ways on how to increase our
+              subscribers to regularly listen to the audio content.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+   
+  </body>
+
+  <script src="../js/jquery-3.2.1.min.js"></script>
+  <script src="../js/popper.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../plugins/scroll-fixed/jquery-scrolltofixed-min.js"></script>
+  <script src="../plugins/slider/js/owl.carousel.min.js"></script>
+  <script src="../js/script.js"></script>
+</html>

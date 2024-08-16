@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+  <div id="zaxis">
+    <br>
+    <div id="google_translate_element"></div>
+
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+}
+</script>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <br>
+  </div>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+
+    <title>AddTable</title>
+  </head>
+  <style>
+          .Name{
+              width:80%;
+          }
+          .btns {
+      height: 20px;
+      line-height: 20px;
+      width: 20px;
+      font-size: 2em;
+      font-weight: bold;
+      border-radius: 50%;
+      background-color: #4CAF50;
+      color: white;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .table-canvas
+    {
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+        overflow:hidden;
+        border-radius: 10px;
+        -pie-background: linear-gradient(#ece9d8, #E5ECD8);
+        box-shadow: #666 0px 2px 3px;
+        behavior: url(Include/PIE.htc);
+        overflow: hidden;
+    }
+          .Options{
+              width:20%;
+          }
+
+          body{
+            background-color:#DEE9FF;
+          }
+
+          tr{
+              background-color: white;
+          }
+
+          table{
+              border-radius:50%;
+          }
+          .purp{
+            color:#5891FF; 
+          }
+  </style>
+  <body>
+    <!DOCTYPE html>
+    <html lang="en">
+      <!-- <style>
+        .bluebtn{
+            background-color: #95BAFF;
+            border: none;
+        }
+    </style> -->
+      <head>
+        <meta charset="utf-8" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+        <title>Access</title>
+        <link
+          rel="shortcut icon"
+          href="../Images/fav.png"
+          type="image/x-icon"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap"
+          rel="stylesheet"
+        />
+        <link rel="shortcut icon" href="../Images/fav.jpg" />
+        <link rel="stylesheet" href="../Stylesheet/bootstrap.min.css" />
+        <link rel="stylesheet" href="../Stylesheet/all.min.css" />
+        <link rel="stylesheet" href="../Stylesheet/animate.css" />
+        <link
+          rel="stylesheet"
+          href="../plugins/slider/css/owl.carousel.min.css"
+        />
+        <link
+          rel="stylesheet"
+          href="../plugins/slider/css/owl.theme.default.css"
+        />
+        <link rel="stylesheet" type="text/css" href="../Stylesheet/style.css" />
+        <style>
+          .bluebtn {
+            background-color: #c5e1fc;
+            border: none;
+            color: #ffffff;
+            border: solid;
+          }
+          .footer {
+            background-color: #c5e1ff;
+          }
+          .roundbtn {
+            border-radius: 50%;
+          }
+          .whiteBtn {
+            color: gray;
+          }
+          .flexbox {
+            display: flex;
+          }
+          .table {
+            width: 60%;
+          }
+        </style>
+      </head>
+
+      <body>
+        <header class="continer-fluid" style="background-color: #f1f8ff">
+          <div
+            id="menu-jk"
+            class="header-bottom"
+            style="background-color: #f1f8ff"
+          >
+            <div class="container">
+              <div class="row nav-row">
+                <div class="col-lg-3 col-md-12 logo">
+                  <a href="/">
+                    <img src="../Images/logo.png" alt="" style="width: 80%" />
+
+                    <a data-toggle="collapse" data-target="#menu" href="#menu"
+                      ><i class="fas d-block d-lg-none small-menu fa-bars"></i
+                    ></a>
+                  </a>
+                </div>
+                <div
+                  id="menu"
+                  class="col-lg-9 col-md-12 d-none d-lg-block nav-col"
+                >
+                  <ul class="navbad">
+                    <li class="nav-item active">
+                      <a class="nav-link bluebtn" href="#">Home </a>
+                    </li>
+
+                    <li class="nav-item">
+                      <a class="nav-link bluebtn" href="#">Contact Us</a>
+                    </li>
+                    <li>
+                      <div class="dropdown roundbtn whiteBtn">
+                        <button
+                          class="
+                            btn btn-secondary
+                            dropdown-toggle
+                            nav-link
+                            bluebtn
+                            roundbtn
+                          "
+                          type="button"
+                          id="dropdownMenuButton"
+                          data-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false"
+                        >
+                          Dropdown button
+                        </button>
+                        <div
+                          class="dropdown-menu bluebtn roundbtn"
+                          aria-labelledby="dropdownMenuButton"
+                        >
+                          <a class="dropdown-item" href="#">Sign in</a>
+                          <a class="dropdown-item" href="#">Log Out</a>
+                          <a class="dropdown-item" href="#"
+                            >Sign in as Volunteer</a
+                          >
+                          <a class="dropdown-item" href="#">Add POST</a>
+                        </div>
+                      </div>
+                      <!-- <div class="dropdown">
+                                        <button class="btn btn-secondary dropdown-toggle nav-link" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                          Dropdown button
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                          <a class="dropdown-item " href="#">Sign in</a>
+                                          <a class="dropdown-item " href="#">Log Out</a>
+                                        </div>
+                                      </div> -->
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+        <br /><br />
+        <div class="container">
+          <table class="table table-canvas mx-auto">
+            <thead class="thead-light">
+              <tr>
+                <th scope="col" class="purp">#</th>
+                <th scope="col" class="Name purp">Name</th>
+                <th scope="col" class="Options purp">Options</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% if(users.length == 0){ %> 
+                <p>No volunteers....</p>
+              <% }else{ %>
+              <% for(i=0; i<users.length; i++){ %> 
+              <tr>
+                <th scope="row"><%=i+1%> </th>
+                <td><%= users[i].name %> </td>
+                <td>
+                  <form action="/updateStatus?_method=PUT" method="POST">
+                    <input type="text" name="id" value="<%=users[i]._id%>" style="display: none;">
+                    <input type="text" name="accessLevel" value="user" style="display: none;">
+                    <button
+                      type="submit"
+                      class="btn btn-danger btn-sm btns"
+                    ></button>
+                  </form>
+                  <form action="/updateStatus?_method=PUT" method="POST">
+                    <input type="text" name="id" value="<%=users[i]._id%>" style="display: none;">
+                    <input type="text" name="accessLevel" value="volunteer" style="display: none;">
+                    <button
+                      type="submit"
+                      class="btn btn-danger btn-sm btns"
+                    ></button>
+                  </form>
+                  <form action="/updateStatus?_method=PUT" method="POST">
+                    <input type="text" name="id" value="<%=users[i]._id%>" style="display: none;">
+                    <input type="text" name="accessLevel" value="admin" style="display: none;">
+                    <button
+                      type="submit"
+                      class="btn btn-danger btn-sm btns"
+                    ></button>
+                  </form>
+                </td>
+              </tr>
+              <% } %>
+              <% } %>
+            </tbody>
+          </table>
+        </div>
+
+        <script
+          src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+          integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+          crossorigin="anonymous"
+        ></script>
+        <script
+          src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+          integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+          crossorigin="anonymous"
+        ></script>
+        <script
+          src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+          integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+          crossorigin="anonymous"
+        ></script>
+      </body>
+    </html>
+  </body>
+</html>

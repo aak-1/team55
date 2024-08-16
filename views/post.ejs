@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <div id="zaxis">
+    <br />
+    <div id="google_translate_element"></div>
+
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+          { pageLanguage: "en" },
+          "google_translate_element"
+        );
+      }
+    </script>
+
+    <script
+      type="text/javascript"
+      src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+    ></script>
+    <br />
+  </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Login Template</title>
+  </head>
+  <body>
+    <main class="d-flex align-items-center min-vh-100 py-3 py-md-0">
+      <div class="container">
+        <div class="card login-card">
+          <div class="row no-gutters">
+            <div class="col-md-5"></div>
+            <div class="col-md-7">
+              <div class="card-body">
+                <div class="brand-wrapper"></div>
+                <p class="login-card-description">Register</p>
+                <form action="/users/login" method="POST">
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      name="phoneNumber"
+                      id="phoneNumber"
+                      class="form-control"
+                      placeholder="phoneNumber"
+                      value="<%= typeof phoneNumber != 'undefined' ? phoneNumber : '' %>"
+                    />
+                  </div>
+                  <div class="form-group mb-4">
+                    <label for="password" class="sr-only">Password</label>
+                    <input
+                      type="password"
+                      name="password"
+                      id="password"
+                      class="form-control"
+                      placeholder="***********"
+                      value="<%= typeof email != 'undefined' ? password : '' %>"
+                    />
+                  </div>
+                  <button class="btn btn-block login-btn mb-4" type="submit">
+                    Login
+                  </button>
+                </form>
+                <p class="login-card-footer-text">
+                  Have an account?
+                  <a href="login" class="text-reset">Login here</a>
+                </p>
+                <nav class="login-card-footer-nav">
+                  <a href="#!">Terms of use.</a>
+                  <a href="#!">Privacy policy</a>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

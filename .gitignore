@@ -1,0 +1,13 @@
+Team*.zip
+team*.zip
+*.pem
+*.ppk
+*.crt
+*.key
+*.ovpn
+*.env
+firebase.json
+.firebaserc
+service-account-key.json
+node_modules/
+node_modules
